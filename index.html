@@ -3,248 +3,396 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Labar Informática</title>
+  <title>Labar Informática | Sucesso em Soluções</title>
+  <meta name="description" content="Labar Informática - Sucesso em Soluções. Suporte técnico, infraestrutura, segurança, sites e automação para empresas e pessoas." />
   <style>
     :root{
       --bg:#07111f;
-      --card:#0d1b2a;
+      --bg2:#0b1627;
+      --card:#0f2035;
+      --line:rgba(255,255,255,.09);
+      --text:#ebf4ff;
+      --muted:#a7bad2;
       --accent:#00d1ff;
       --accent2:#7c4dff;
-      --text:#eaf2ff;
-      --muted:#9bb0c9;
-      --line:rgba(255,255,255,.08);
+      --ok:#25d366;
     }
-
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:radial-gradient(circle at top, #12304e 0, var(--bg) 45%);
       color:var(--text);
+      background:
+        radial-gradient(circle at top, #10304f 0, transparent 30%),
+        linear-gradient(180deg,var(--bg),var(--bg2));
     }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1180px,calc(100% - 32px));margin:0 auto}
 
-    .wrap{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
+    .topbar{
+      position:sticky;top:0;z-index:40;
+      background:rgba(7,17,31,.78);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
     }
-
-    .card{
-      width:min(1100px,100%);
-      background:rgba(13,27,42,.86);
-      backdrop-filter:blur(10px);
-      border:1px solid var(--line);
-      border-radius:28px;
-      overflow:hidden;
-      box-shadow:0 30px 80px rgba(0,0,0,.35);
+    .nav{
+      height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:.04em}
+    .logo{
+      width:44px;height:44px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      display:grid;place-items:center;box-shadow:0 10px 25px rgba(0,209,255,.2);
+    }
+    .logo svg{width:24px;height:24px;fill:#fff}
+    .menu{display:flex;align-items:center;gap:22px;color:var(--muted);font-weight:600}
+    .menu a:hover{color:var(--text)}
+    .nav-actions{display:flex;align-items:center;gap:12px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 18px;border-radius:999px;font-weight:700;border:1px solid var(--line);
+      transition:.2s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      border:none;color:#fff;
+    }
+    .btn-whatsapp{
+      background:var(--ok);border:none;color:#fff;
     }
 
     .hero{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:0;
+      padding:72px 0 54px;
+      display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;
     }
-
-    .left{padding:56px}
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:24px;
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 14px;border:1px solid var(--line);
+      border-radius:999px;color:var(--muted);background:rgba(255,255,255,.03);
+      margin-bottom:18px;
     }
-
-    .mark{
-      width:72px;
-      height:72px;
-      border-radius:20px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      display:grid;
-      place-items:center;
-      box-shadow:0 15px 35px rgba(0,209,255,.25);
+    .eyebrow i{
+      width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;
+      box-shadow:0 0 0 6px rgba(0,209,255,.12);
     }
-
-    .mark svg{width:38px;height:38px;fill:white}
-
     h1{
       margin:0;
-      font-size:clamp(2.4rem,5vw,4.8rem);
+      font-size:clamp(2.6rem,6vw,5.3rem);
       line-height:1.02;
+      letter-spacing:-.04em;
     }
-
     .slogan{
-      margin:14px 0 24px;
-      font-size:1.1rem;
+      margin:18px 0 20px;
       color:var(--accent);
-      font-weight:700;
-      letter-spacing:.04em;
+      font-weight:800;
       text-transform:uppercase;
+      letter-spacing:.09em;
     }
-
-    p{
-      margin:0 0 22px;
+    .lead{
+      margin:0 0 28px;
       color:var(--muted);
-      font-size:1.05rem;
-      line-height:1.7;
-      max-width:58ch;
+      font-size:1.08rem;
+      line-height:1.8;
+      max-width:60ch;
     }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:14px;
-      margin-top:28px;
+    .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+    .stats{
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
     }
+    .stat{
+      padding:16px 18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03);
+    }
+    .stat b{display:block;font-size:1.2rem;margin-bottom:4px}
+    .stat span{color:var(--muted);font-size:.95rem}
 
-    .item{
-      padding:18px;
-      border:1px solid var(--line);
-      border-radius:18px;
+    .hero-card{
+      padding:22px;border:1px solid var(--line);border-radius:28px;
+      background:linear-gradient(180deg,rgba(0,209,255,.11),rgba(124,77,255,.07));
+      position:relative;overflow:hidden;
+    }
+    .hero-card:before,.hero-card:after{
+      content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.08)
+    }
+    .hero-card:before{width:340px;height:340px;right:-90px;top:-70px}
+    .hero-card:after{width:240px;height:240px;left:-70px;bottom:-80px}
+    .visual{
+      min-height:500px;border-radius:24px;border:1px solid rgba(255,255,255,.08);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(0,209,255,.25), transparent 35%),
+        radial-gradient(circle at 70% 70%, rgba(124,77,255,.22), transparent 38%),
+        rgba(255,255,255,.03);
+      display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+    }
+    .ring{
+      width:min(390px,88%);aspect-ratio:1;border-radius:50%;
+      border:1px solid rgba(255,255,255,.09);
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.02);
+    }
+    .ring:before,.ring:after{
+      content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.08)
+    }
+    .ring:before{width:76%;height:76%}
+    .ring:after{width:50%;height:50%}
+    .center-mark{
+      width:34%;aspect-ratio:1;border-radius:22px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      display:grid;place-items:center;box-shadow:0 20px 40px rgba(0,209,255,.18)
+    }
+    .center-mark svg{width:54%;height:54%;fill:#fff}
+
+    section{padding:22px 0 8px}
+    .section-title{
+      display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px
+    }
+    .section-title h2{margin:0;font-size:2rem;letter-spacing:-.03em}
+    .section-title p{margin:0;color:var(--muted);max-width:60ch;line-height:1.7}
+
+    .services{
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px
+    }
+    .card{
+      padding:22px;border:1px solid var(--line);border-radius:22px;
       background:rgba(255,255,255,.03);
     }
-
-    .item b{
-      display:block;
-      margin-bottom:8px;
-      color:var(--text);
+    .card .icon{
+      width:48px;height:48px;border-radius:16px;
+      background:linear-gradient(135deg,rgba(0,209,255,.22),rgba(124,77,255,.18));
+      display:grid;place-items:center;margin-bottom:14px
     }
+    .card .icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}
+    .card h3{margin:0 0 10px}
+    .card p{margin:0;color:var(--muted);line-height:1.65;font-size:.98rem}
 
-    .item span{
-      color:var(--muted);
-      font-size:.96rem;
-      line-height:1.55;
+    .portfolio{
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px
     }
-
-    .right{
-      padding:28px;
-      background:linear-gradient(180deg,rgba(0,209,255,.12),rgba(124,77,255,.08));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .circle{
-      width:min(420px,100%);
-      aspect-ratio:1;
-      border-radius:50%;
-      border:1px solid rgba(255,255,255,.08);
+    .work{
+      min-height:240px;border:1px solid var(--line);border-radius:22px;overflow:hidden;
       background:
-        radial-gradient(circle at 30% 30%, rgba(0,209,255,.28), transparent 38%),
-        radial-gradient(circle at 70% 70%, rgba(124,77,255,.22), transparent 42%),
-        rgba(255,255,255,.03);
-      position:relative;
-      display:grid;
-      place-items:center;
+        radial-gradient(circle at top left, rgba(0,209,255,.18), transparent 38%),
+        linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      position:relative;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;
     }
-
-    .circle:before,
-    .circle:after{
-      content:"";
-      position:absolute;
-      border-radius:50%;
-      border:1px solid rgba(255,255,255,.08);
+    .work .tag{
+      position:absolute;top:18px;left:18px;
+      padding:8px 12px;border-radius:999px;background:rgba(7,17,31,.65);
+      border:1px solid var(--line);color:var(--muted);font-size:.9rem
     }
+    .work h3{margin:0 0 6px}
+    .work p{margin:0;color:var(--muted);line-height:1.6}
 
-    .circle:before{inset:18%}
-    .circle:after{inset:34%}
-
-    .tech{
-      width:54%;
-      height:54%;
-      display:grid;
-      place-items:center;
+    .contact-box{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:14px;
     }
-
-    .tech svg{
-      width:100%;
-      height:100%;
-      fill:none;
-      stroke:white;
-      stroke-width:1.8;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-      opacity:.95;
+    .contact-list{
+      display:grid;gap:12px
     }
-
-    .footer{
-      padding:18px 56px 40px;
-      color:var(--muted);
+    .contact-item{
+      padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)
+    }
+    .contact-item b{display:block;margin-bottom:6px}
+    .contact-item span{color:var(--muted)}
+    footer{
+      margin-top:24px;
+      padding:24px 0 40px;
       border-top:1px solid var(--line);
+      color:var(--muted);
+    }
+    .footer-grid{
+      display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap
     }
 
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .left{padding:36px}
-      .footer{padding:18px 36px 32px}
-      .grid{grid-template-columns:1fr}
+    .whatsapp-float{
+      position:fixed;right:18px;bottom:18px;z-index:50;
+      width:58px;height:58px;border-radius:50%;
+      background:var(--ok);display:grid;place-items:center;
+      box-shadow:0 12px 28px rgba(37,211,102,.35);
+    }
+    .whatsapp-float svg{width:28px;height:28px;fill:#fff}
+
+    @media (max-width: 980px){
+      .hero,.contact-box{grid-template-columns:1fr}
+      .services,.portfolio{grid-template-columns:1fr 1fr}
+      .menu{display:none}
+      .stats{grid-template-columns:1fr}
+      .visual{min-height:360px}
+    }
+    @media (max-width: 640px){
+      .services,.portfolio{grid-template-columns:1fr}
+      .nav-actions .btn-primary{display:none}
+      .hero{padding-top:44px}
+      .section-title{flex-direction:column;align-items:flex-start}
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card">
-      <div class="hero">
-        <div class="left">
-          <div class="logo">
-            <div class="mark" aria-hidden="true">
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="logo">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2l8 4v12l-8 4-8-4V6l8-4zm0 2.3L6 7v10l6 3 6-3V7l-6-2.7zM8 10h8v2H8v-2zm0 4h8v2H8v-2z"/>
+          </svg>
+        </span>
+        <span>Labar Informática</span>
+      </a>
+
+      <nav class="menu">
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="#contato">Solicitar orçamento</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div>
+        <div class="eyebrow"><i></i> Soluções completas em tecnologia</div>
+        <h1>Labar Informática</h1>
+        <div class="slogan">Labar - Sucesso em Soluções</div>
+        <p class="lead">
+          Oferecemos suporte técnico, infraestrutura, segurança e automação para empresas e profissionais
+          que precisam de tecnologia confiável, atendimento rápido e resultados reais.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#servicos">Conhecer serviços</a>
+          <a class="btn" href="#portfolio">Ver portfólio</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><b>Suporte ágil</b><span>Atendimento rápido e objetivo.</span></div>
+          <div class="stat"><b>Ambientes seguros</b><span>Boas práticas e proteção.</span></div>
+          <div class="stat"><b>Mais performance</b><span>Otimização para crescer.</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="visual">
+          <div class="ring">
+            <div class="center-mark" aria-hidden="true">
               <svg viewBox="0 0 24 24">
                 <path d="M12 2l8 4v12l-8 4-8-4V6l8-4zm0 2.3L6 7v10l6 3 6-3V7l-6-2.7zM8 10h8v2H8v-2zm0 4h8v2H8v-2z"/>
               </svg>
             </div>
-            <div>
-              <div style="font-weight:800;letter-spacing:.08em;text-transform:uppercase">Labar Informática</div>
-              <div style="color:var(--muted)">Suporte, inovação e soluções em TI</div>
-            </div>
-          </div>
-
-          <h1>Labar Informática</h1>
-          <div class="slogan">Labar - Sucesso em Soluções</div>
-
-          <p>Transformamos tecnologia em resultado com atendimento ágil, soluções confiáveis e foco total na continuidade do seu negócio.</p>
-
-          <div class="grid">
-            <div class="item">
-              <b>Suporte técnico</b>
-              <span>Manutenção, diagnóstico e resolução rápida de problemas para manter seus sistemas sempre operando.</span>
-            </div>
-            <div class="item">
-              <b>Infraestrutura</b>
-              <span>Redes, servidores, VPS e automação para ambientes estáveis, seguros e escaláveis.</span>
-            </div>
-            <div class="item">
-              <b>Segurança</b>
-              <span>Boas práticas, backups e proteção para reduzir riscos e preservar seus dados.</span>
-            </div>
-            <div class="item">
-              <b>Performance</b>
-              <span>Sites, sistemas e máquinas otimizados para entregar mais velocidade e produtividade.</span>
-            </div>
           </div>
         </div>
-
-        <div class="right">
-          <div class="circle">
-            <div class="tech">
-              <svg viewBox="0 0 100 100" aria-hidden="true">
-                <path d="M20 70V30l30-15 30 15v40L50 85 20 70z"/>
-                <path d="M35 40l15-8 15 8v20l-15 8-15-8V40z"/>
-                <path d="M50 32v36"/>
-                <path d="M35 48h30"/>
-                ircle cx="50" cy="50" r="4" fill="white" stroke="none"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer">
-        Soluções em TI para pessoas e empresas que precisam de confiança, organização e crescimento.
       </div>
     </section>
+
+    <section id="servicos">
+      <div class="section-title">
+        <h2>Serviços</h2>
+        <p>Uma estrutura enxuta e profissional para apresentar claramente o que a Labar Informática entrega.</p>
+      </div>
+
+      <div class="services">
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M4 7h16M7 7v12m10-12v12M5 19h14"/></svg>
+          </div>
+          <h3>Suporte Técnico</h3>
+          <p>Manutenção, diagnóstico e correção de problemas em computadores, notebooks, redes e sistemas.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16M7 7l10 10M17 7L7 17"/></svg>
+          </div>
+          <h3>Infraestrutura</h3>
+          <p>Servidores, VPS, rede, backups e ambientes preparados para funcionar com estabilidade e escalabilidade.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Segurança</h3>
+          <p>Proteção de dados, boas práticas, monitoramento e configuração para reduzir riscos e falhas.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M4 19h16M7 16V8m5 8V5m5 11v-6"/></svg>
+          </div>
+          <h3>Performance</h3>
+          <p>Otimização de sites, sistemas e máquinas para ganhar velocidade, produtividade e eficiência.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="section-title">
+        <h2>Portfólio</h2>
+        <p>Exemplos de frentes de atuação que podem ser ajustadas conforme seus serviços reais.</p>
+      </div>
+
+      <div class="portfolio">
+        <article class="work">
+          <div class="tag">Site Institucional</div>
+          <h3>Presença digital profissional</h3>
+          <p>Criação de páginas modernas, rápidas e responsivas para empresas e profissionais.</p>
+        </article>
+
+        <article class="work">
+          <div class="tag">Infraestrutura</div>
+          <h3>Servidores e automação</h3>
+          <p>Configuração, hospedagem e automação de ambientes para melhorar operação e disponibilidade.</p>
+        </article>
+
+        <article class="work">
+          <div class="tag">Suporte</div>
+          <h3>Atendimento e manutenção</h3>
+          <p>Resolução de problemas, manutenção preventiva e suporte contínuo para manter tudo em ordem.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="section-title">
+        <h2>Contato</h2>
+        <p>Substitua os dados abaixo pelos seus contatos reais e, se quiser, me peça que eu já ajuste para você.</p>
+      </div>
+
+      <div class="contact-box">
+        <div class="card">
+          <h3 style="margin-top:0">Fale com a Labar Informática</h3>
+          <p style="margin-bottom:0">Atendemos com foco em solução, clareza e rapidez para tirar sua tecnologia do caminho e colocá-la a favor do seu negócio.</p>
+        </div>
+
+        <div class="contact-list">
+          <div class="contact-item"><b>WhatsApp</b><span>(00) 00000-0000</span></div>
+          <div class="contact-item"><b>E-mail</b><span>contato@labarinformatica.com.br</span></div>
+          <div class="contact-item"><b>Endereço</b><span>Sua cidade - Seu estado</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <b style="color:var(--text)">Labar Informática</b><br />
+          <span>Labar - Sucesso em Soluções</span>
+        </div>
+        <div>Suporte técnico, infraestrutura, segurança e performance.</div>
+      </div>
+    </footer>
   </main>
+
+  <a class="btn btn-whatsapp" href="mailto:adminlabarinformatica@gmail.com">E-mail de contato</a>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.61c-.29-.15-1.72-.85-1.99-.95-.27-.1-.47-.15-.67.15-.2.29-.77.95-.94 1.14-.17.2-.35.22-.65.07-.29-.15-1.24-.46-2.36-1.47-.87-.77-1.46-1.73-1.64-2.02-.17-.29-.02-.45.13-.6.14-.14.29-.36.44-.54.15-.18.2-.31.31-.52.1-.2.05-.38-.02-.54-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.54.07-.82.38-.28.29-1.07 1.05-1.07 2.55s1.1 2.95 1.25 3.16c.15.2 2.15 3.29 5.21 4.61.73.31 1.3.5 1.75.64.74.23 1.42.2 1.96.12.6-.09 1.72-.7 1.96-1.37.24-.67.24-1.24.16-1.37-.07-.14-.27-.22-.57-.37z"/>
+      <path d="M16.02 3C8.83 3 3 8.79 3 15.95c0 2.28.6 4.51 1.73 6.46L3 29l6.72-1.71c1.91 1.04 4.06 1.59 6.29 1.59h.01C23.2 28.88 29 23.09 29 15.95 29 8.79 23.19 3 16.02 3zm0 22.89h-.01c-2 0-3.96-.54-5.66-1.57l-.41-.24-3.99 1.02 1.06-3.89-.27-.4a10.86 10.86 0 0 1-1.68-5.86c0-6.01 4.91-10.89 10.95-10.89 2.92 0 5.67 1.14 7.74 3.19a10.79 10.79 0 0 1 3.22 7.7c0 6.01-4.91 10.88-10.95 10.88z"/>
+    </svg>
+  </a>
 </body>
 </html>
