@@ -9,8 +9,6 @@ priority: 1,
 ];
 }' > app/sitemap.ts
 
-# Cria o robots.ts correto (só o conteúdo do robots)
-echo 'import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
 return {
