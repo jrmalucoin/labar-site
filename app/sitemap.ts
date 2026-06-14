@@ -1,5 +1,3 @@
-# Cria sitemap.ts correto
-cat > app/sitemap.ts << 'EOF'
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -12,19 +10,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
-EOF
-
-# Cria robots.ts correto
-cat > app/robots.ts << 'EOF'
-import { MetadataRoute } from "next";
-
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
-    sitemap: "https://labarinformatica.com.br/sitemap.xml",
-  };
-}
-EOF
