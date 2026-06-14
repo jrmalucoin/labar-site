@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+echo 'import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 return [
@@ -9,11 +9,10 @@ changeFrequency: "weekly",
 priority: 1,
 },
 ];
-}
+}' > app/sitemap.ts
 
-app/robots.ts
-
-import { MetadataRoute } from "next";
+# Cria o robots.ts correto (só o conteúdo do robots)
+echo 'import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
 return {
@@ -21,11 +20,6 @@ rules: {
 userAgent: "*",
 allow: "/",
 },
-
-```
-sitemap:
-  "https://labarinformatica.com.br/sitemap.xml",
-```
-
+sitemap: "https://labarinformatica.com.br/sitemap.xml",
 };
 }
