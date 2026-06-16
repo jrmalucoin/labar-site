@@ -22,8 +22,8 @@ export default function About() {
 
           </p>
 
-          <p className="text-lg leading-8 text-slate-500 mt-6">
-
+          <p className="text-lg leading-8 text-slate-600 dark:text-slate-300 mt-6">
+    
             Atuamos com Inteligência Artificial,
             WhatsApp Business, N8N, Evolution API,
             sistemas web e integrações corporativas.

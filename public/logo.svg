@@ -1,0 +1,35 @@
+<svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="labarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"></stop>
+      <stop offset="100%" stop-color="#38BDF8"></stop>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(15,20)">
+    <circle cx="30" cy="30" r="8" fill="url(#labarGradient)"></circle>
+    <circle cx="60" cy="15" r="8" fill="url(#labarGradient)"></circle>
+    <circle cx="90" cy="30" r="8" fill="url(#labarGradient)"></circle>
+    <circle cx="60" cy="55" r="8" fill="url(#labarGradient)"></circle>
+    <circle cx="60" cy="30" r="10" fill="#0F172A"></circle>
+
+    <line x1="30" y1="30" x2="60" y2="15" stroke="#2563EB" stroke-width="3"></line>
+    <line x1="60" y1="15" x2="90" y2="30" stroke="#2563EB" stroke-width="3"></line>
+    <line x1="30" y1="30" x2="60" y2="55" stroke="#2563EB" stroke-width="3"></line>
+    <line x1="90" y1="30" x2="60" y2="55" stroke="#2563EB" stroke-width="3"></line>
+    <line x1="60" y1="30" x2="30" y2="30" stroke="#2563EB" stroke-width="3"></line>
+    <line x1="60" y1="30" x2="90" y2="30" stroke="#2563EB" stroke-width="3"></line>
+    <line x1="60" y1="30" x2="60" y2="15" stroke="#2563EB" stroke-width="3"></line>
+    <line x1="60" y1="30" x2="60" y2="55" stroke="#2563EB" stroke-width="3"></line>
+  </g>
+
+  <text x="140" y="55" font-size="42" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#0F172A">
+    LABAR
+  </text>
+
+  <text x="142" y="85" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#2563EB">
+    Sucesso em Soluções
+  </text>
+
+</svg>

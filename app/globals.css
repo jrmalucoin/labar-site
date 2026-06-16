@@ -40,3 +40,19 @@ body {
       transparent 40%
     );
 }
+.hero-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 9999px;
+  background: rgba(37, 99, 235, 0.18);
+  filter: blur(120px);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+}

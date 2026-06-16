@@ -1,46 +1,103 @@
 export default function Hero() {
   return (
-    <section className="hero-bg">
+    <section className="relative overflow-hidden">
 
-      <div className="container-custom py-28 text-center">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.18),transparent_35%)]" />
 
-        <div className="inline-flex px-4 py-2 rounded-full border text-sm mb-8">
-          🚀 Automações • IA • WhatsApp
-        </div>
+      <div className="container-custom relative z-10">
 
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+        <div className="flex min-h-[85vh] flex-col items-center justify-center text-center">
 
-          Transforme sua empresa
-          <br />
-
-          com Inteligência Artificial
-
-        </h1>
-
-        <p className="mt-8 text-xl text-slate-500 max-w-3xl mx-auto">
-
-          Desenvolvemos soluções modernas
-          utilizando IA, N8N, Evolution API,
-          WhatsApp Business e sistemas web.
-
-        </p>
-
-        <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center">
-
-          <a
-            href="https://wa.me/5521974692923"
-            target="_blank"
-            className="bg-blue-600 text-white px-8 py-4 rounded-xl"
+          <span
+            className="
+            mb-6
+            rounded-full
+            border
+            border-blue-500/30
+            bg-blue-500/10
+            px-4
+            py-2
+            text-sm
+            text-blue-400
+          "
           >
-            Falar no WhatsApp
-          </a>
+            Inteligência Artificial • WhatsApp • Automação
+          </span>
 
-          <a
-            href="#servicos"
-            className="border px-8 py-4 rounded-xl"
+          <h1
+            className="
+             max-w-6xl
+             text-5xl
+             font-bold
+             leading-tight             
+             md:text-7xl
+          "
           >
-            Ver Serviços
-          </a>
+            Transformamos
+            <span className="text-blue-500">
+              {" "}processos manuais{" "}
+            </span>
+            em operações inteligentes
+          </h1>
+
+          <p
+            className="
+            mt-8
+            max-w-3xl
+            text-xl
+            text-slate-600 
+            dark:text-slate-300
+          "
+          >
+            Desenvolvemos soluções com Inteligência Artificial,
+            WhatsApp, N8N, Evolution API e sistemas web
+            para empresas que desejam crescer,
+            automatizar processos e aumentar resultados.
+          </p>
+
+          <div
+            className="
+            mt-12
+            flex
+            flex-col
+            gap-4
+            md:flex-row
+          "
+          >
+            <a
+              href="https://wa.me/5521974692923"
+              target="_blank"
+              className="
+                rounded-xl
+                bg-blue-600
+                px-8
+                py-4
+                font-semibold
+                text-white
+                transition
+                hover:bg-blue-700
+              "
+            >
+              Solicitar Demonstração
+            </a>
+
+            <a
+              href="#servicos"
+              className="
+                rounded-xl
+                border
+                px-8
+                py-4
+                font-semibold
+                text-slate-900
+                dark:text-white
+                border-slate-300
+                dark:border-slate-700
+              "
+            >
+              Conhecer Serviços
+            </a>
+          </div>
 
         </div>
 

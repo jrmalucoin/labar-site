@@ -32,7 +32,7 @@ export default function Services() {
                 transition
               "
             >
-              <h3 className="font-semibold text-xl">
+              <h3 className="font-semibold text-xl text-slate-900 dark:text-white">
                 {service}
               </h3>
             </div>

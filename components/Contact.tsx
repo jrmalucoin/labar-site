@@ -8,7 +8,7 @@ export default function Contact() {
 
         <div className="text-center">
 
-          <h2 className="text-4xl font-bold mb-8">
+          <h2 className="text-4xl text-slate-700 dark:text-slate-300">
             Entre em Contato
           </h2>
 
