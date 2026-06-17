@@ -21,7 +21,7 @@ export default function Hero() {
             text-blue-400
           "
           >
-            Inteligência Artificial • WhatsApp • Automação
+            Inteligência Artificial • WhatsApp do JR • Automação
           </span>
 
           <h1
@@ -33,11 +33,7 @@ export default function Hero() {
              md:text-7xl
           "
           >
-            Transformamos
-            <span className="text-blue-500">
-              {" "}processos manuais{" "}
-            </span>
-            em operações inteligentes
+            Transformamos processos manuais em operações inteligentes
           </h1>
 
           <p
