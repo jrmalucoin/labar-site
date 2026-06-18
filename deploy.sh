@@ -2,7 +2,7 @@
 
 git add .
 git commit -m "$1"
-git push origin main
+git push origin main || exit 1
 
 echo "Iniciando deploy..."
 
