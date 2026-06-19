@@ -21,7 +21,7 @@ export default function Hero() {
             text-blue-400
           "
           >
-            Inteligência Artificial • WhatsApp • Automação as asd as as adas 
+            Inteligência Artificial • WhatsApp • Automação  TESTE WEBHOOK DEV 08:45
           </span>
 
           <h1
@@ -33,7 +33,7 @@ export default function Hero() {
              md:text-7xl
           "
           >
-            Transformamos processos manuais em operações inteligentes
+            Transformamos processos manuais em operações inteligentes TESTE WEBHOOK DEV 08:45
           </h1>
 
           <p
@@ -47,7 +47,7 @@ export default function Hero() {
           >
             Desenvolvemos soluções com Inteligência Artificial,
             WhatsApp, N8N, Evolution API e sistemas web
-            para empresas que desejam crescer,
+            para empresas que desejam crescer, zfz dzsd zdfg zdfgz dfz dfzdfzdf
             automatizar processos e aumentar resultados.
           </p>
 
