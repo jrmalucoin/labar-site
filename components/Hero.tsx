@@ -21,7 +21,7 @@ export default function Hero() {
             text-blue-400
           "
           >
-            Inteligência Artificial • WhatsApp • Automação
+            Inteligência Artificial • WhatsApp • Automação e serviços do JR
           </span>
 
           <h1
