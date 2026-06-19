@@ -26,7 +26,7 @@ export default function Manutencao() {
 
             Transformamos
             <span className="text-blue-400"> processos manuais </span>
-            em operações inteligentes
+            em operações inteligentes e automatizadas.
 
           </h1>
 
