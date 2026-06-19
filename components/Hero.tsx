@@ -33,7 +33,7 @@ export default function Hero() {
              md:text-7xl
           "
           >
-            Transformamos processos manuais em operações inteligentes 
+            Transformamos processos manuais em operações inteligentes
           </h1>
 
           <p
@@ -47,7 +47,7 @@ export default function Hero() {
           >
             Desenvolvemos soluções com Inteligência Artificial,
             WhatsApp, N8N, Evolution API e sistemas web
-            para empresas que desejam crescer, 
+            para empresas que desejam crescer,
             automatizar processos e aumentar resultados.
           </p>
 
