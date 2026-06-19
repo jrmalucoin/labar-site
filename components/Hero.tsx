@@ -47,7 +47,7 @@ export default function Hero() {
           >
             Desenvolvemos soluções com Inteligência Artificial,
             WhatsApp, N8N, Evolution API e sistemas web
-            para empresas que desejam crescer, zfz dzsd zdfg zdfgz dfz dfzdfzdf
+            para empresas que desejam crescer, 
             automatizar processos e aumentar resultados.
           </p>
 

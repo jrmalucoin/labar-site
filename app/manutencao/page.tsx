@@ -34,10 +34,13 @@ export default function Manutencao() {
 
             Soluções em Inteligência Artificial,
             automações para WhatsApp,
-            N8N, Evolution API,
-            desenvolvimento de sistemas e
-            infraestrutura cloud.
-
+           /*
+            //N8N, Evolution API,
+            //desenvolvimento de sistemas e
+            //infraestrutura cloud.
+            */
+            Estamos preparando uma experiência digital totalmente nova.
+            Em breve, um site moderno e repleto de soluções para sua empresa.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 md:flex-row">
