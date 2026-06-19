@@ -21,7 +21,7 @@ export default function Hero() {
             text-blue-400
           "
           >
-            Inteligência Artificial • WhatsApp • Automação  TESTE WEBHOOK DEV 08:45
+            Inteligência Artificial • WhatsApp • Automação
           </span>
 
           <h1
@@ -33,7 +33,7 @@ export default function Hero() {
              md:text-7xl
           "
           >
-            Transformamos processos manuais em operações inteligentes TESTE WEBHOOK DEV 08:45
+            Transformamos processos manuais em operações inteligentes
           </h1>
 
           <p
