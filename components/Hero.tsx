@@ -33,7 +33,7 @@ export default function Hero() {
              md:text-7xl
           "
           >
-            Transformamos processos manuais em operações inteligentes muito rápido
+            Transformamos processos manuais em operações inteligentes 
           </h1>
 
           <p
