@@ -21,7 +21,7 @@ export default function Hero() {
             text-blue-400
           "
           >
-            Inteligência Artificial • WhatsApp • Automação • N8N • Evolution API • Desenvolvimento de Sistemas
+            Inteligência Artificial • WhatsApp • Automação
           </span>
 
           <h1
