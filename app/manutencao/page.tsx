@@ -14,7 +14,7 @@ export default function Manutencao() {
 
           <img
             src="/logo.svg"
-            alt="Labar Informática"
+            alt="Labar Informática do jr"
             className="mb-10 h-24 w-auto"
           />
 
