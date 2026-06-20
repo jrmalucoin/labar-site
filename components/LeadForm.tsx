@@ -21,29 +21,37 @@ export default function LeadForm() {
       mensagem: form.get("mensagem"),
     };
 
-    /* Novo enviado pela IA
+// Novo enviado pela IA
 
-    const response =  await fetch(
+    try {
+      const response = await fetch(
         "https://n8n.labarinformatica.com.br/webhook/lead-labar",
       {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error("Erro");
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     }
+  );
 
-    alert("Mensagem enviada com sucesso!");
-    e.currentTarget.reset();
+  if (!response.ok) {
+    throw new Error("Falha no envio");
+  }
 
-*/
+  alert("Mensagem enviada com sucesso!");
+  e.currentTarget.reset();
 
-   
+} catch (error) {
+  console.error(error);
+  alert("Erro ao enviar formulário.");
+} finally {
+  setLoading(false);
+}
+
+
+
+ /*  
     try {
       await fetch(
         "https://n8n.labarinformatica.com.br/webhook/lead-labar",
@@ -66,6 +74,8 @@ export default function LeadForm() {
     setLoading(false);
   }
     
+*/
+
 
   return (
     <section
