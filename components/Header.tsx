@@ -7,7 +7,7 @@ export default function Header() {
       <div className="container-custom h-20 flex items-center justify-between">
 
           <h1 className="font-bold text-xl text-slate-900 dark:text-white">
-            LABAR INFORMÁTICA 
+            LABAR INFORMÁTICA TINHA LTDA 
           </h1>
 
           <p className="text-xs text-white">
