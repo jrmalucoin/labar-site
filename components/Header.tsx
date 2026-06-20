@@ -14,7 +14,7 @@ export default function Header() {
           />
 
           <h1 className="font-bold text-xl text-slate-900 dark:text-white">
-            LABAR INFORMÁTICA 
+            LABAR INFORMÁTICA LTDA 
           </h1>
 
           <p className="text-xs text-blue-600">
