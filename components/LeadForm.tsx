@@ -20,7 +20,9 @@ export default function LeadForm() {
       servico: form.get("servico"),
       mensagem: form.get("mensagem"),
     };
-    
+
+    /* Novo enviado pela IA
+
     const response =  await fetch(
         "https://n8n.labarinformatica.com.br/webhook/lead-labar",
       {
@@ -39,7 +41,9 @@ export default function LeadForm() {
     alert("Mensagem enviada com sucesso!");
     e.currentTarget.reset();
 
-    /*
+*/
+
+   
     try {
       await fetch(
         "https://n8n.labarinformatica.com.br/webhook/lead-labar",
@@ -61,7 +65,7 @@ export default function LeadForm() {
 
     setLoading(false);
   }
-    */
+    
 
   return (
     <section
