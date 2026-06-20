@@ -8,7 +8,7 @@ export default function Header() {
 
         <div>
           <h1 className="font-bold text-xl text-slate-900 dark:text-white">
-            LABAR INFORMÁTICA as a  af asdsadsd 
+            LABAR INFORMÁTICA 
           </h1>
 
           <p className="text-xs text-blue-600">
