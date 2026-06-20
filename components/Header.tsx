@@ -10,11 +10,10 @@ export default function Header() {
             LABAR INFORMÁTICA LTDA 
           </h1>
 
-          <p className="text-xs text-blue-600">
+          <p className="text-xs text-white">
             Sucesso em Soluções
           </p>
-        </div>
-
+        
         <nav className="hidden md:flex gap-8 text-slate-900 dark:text-white">
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre</a>
