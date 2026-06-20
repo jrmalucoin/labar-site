@@ -1,0 +1,72 @@
+Atualizando a pagina via arquivo deploy.sh 
+
+deploy-dev.sh  - atualiza no ambiente de desenvolvimento
+
+deploy.sh  - atualiza no ambiente de produção
+
+
+Para executar o arquivo  deploy-dev.sh  pelo terminal do Mac, siga estes passos:
+
+1. Abra o terminal e vá até o diretório do arquivo
+
+cd /path/até/o/diretório/do/deploy-dev.sh
+
+Use  cd  para navegar até onde o arquivo está salvo. Se o arquivo estiver na sua pasta atual, basta continuar.
+
+2. Verifique se o arquivo tem permissão de execução
+
+ls -l deploy-dev.sh
+
+
+Se não vejo  x  (execução) nas permissões
+ (ex:  -rw-r--r-- ), dê a permissão:
+
+chmod +x deploy-dev.sh
+
+
+3. Execute o script
+
+./deploy-dev.sh
+
+O  ./  indica que você quer executar o arquivo localizado no diretório atual.
+---
+Nota: Se o script usa comandos Bash, isso funcionará diretamente. Se precisar de um intérprete específico (ex: Python), pode ser necessário executar como:
+
+bash deploy-dev.sh
+
+Mas para scripts  .sh  padrão,  ./deploy-dev.sh  é o método correto.
+
+
+
+O arquivo deploy-dev.sh é esse abaixo:
+
+cd ~/labar-site
+
+git checkout dev
+
+git status
+
+git add .
+
+git commit -m "Descrição da alteração"
+
+git push origin dev
+
+
+
+O arquivo deploy.sh é esse abaixo:
+
+cd ~/labar-site
+
+git checkout main
+git merge dev
+git push origin main
+
+
+
+
+
+
+
+
+

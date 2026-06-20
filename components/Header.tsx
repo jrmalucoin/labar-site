@@ -7,6 +7,12 @@ export default function Header() {
       <div className="container-custom h-20 flex items-center justify-between">
 
         <div>
+            <img
+            src="/logo.svg"
+            alt="Labar Informática"
+            className="mb-10 h-24 w-auto"
+          />
+
           <h1 className="font-bold text-xl text-slate-900 dark:text-white">
             LABAR INFORMÁTICA 
           </h1>

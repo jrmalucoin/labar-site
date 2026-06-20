@@ -1,0 +1,91 @@
+Atualizando a pagina depois de alterações no ambiente de testes
+
+ 
+                     Ambiente DEV
+
+1 - Verificar em que ambiente estamos
+    git branch
+
+    Saída esperada:
+
+       dev
+       * main
+
+    O asterisco indica a branch ativa, ou seja, desenvolvimento ou producao.
+
+    Para alterar o branch para main (produção) 
+    git checkout main 
+
+    Para alterar o branch para dev (desenvolvimento)
+    git checkout dev
+
+
+    A variável SITE EM MANUTENÇÃO deve estar sempre igual a false
+    Se for para colocar a página de site em manutenção
+    a variável SITE EM MANUTENÇÃO deve  ser alterada para true
+
+    Esta variável é alterado pelo Easypanel 
+    
+    Se for o ambiente de desenvolvimento clicar em:
+    
+        labarsite-dev --> Environment --> vai aparecer a variável para ser alterada
+  
+
+    Se for o ambiente de producao clicar em:
+      
+        labarsite --> Environment --> vai aparecer a variável para ser alterada
+
+
+    Toda vez que alterar a variável SITE EM MANUTENÇÃO deve-se clicar no botão Save e 
+    depois no botão Deploy 
+  
+  
+    Só clicar no botão deploy o versão do site é atualizada  
+
+
+
+
+                 Ambiente de Desenvolvimento
+
+
+Após fazer as alterações atualize o site com essa versão alterada executando os comandos abaixo
+
+
+3 - Fazer o build no ambiente de desenvolvimento
+
+cd ~/labar-site
+
+git checkout dev
+
+git status
+
+git add .
+
+git commit -m "Descrição da alteração"
+
+git push origin dev
+
+
+Aguarde 30–60 segundos.
+
+Teste em:
+
+https://dev.labarinformatica.com.br
+
+
+
+
+                   Ambiente Produção
+
+5 - Quando estiver aprovado
+
+    git checkout main
+    git merge dev
+    git push origin main
+
+Produção atualizará automaticamente:
+
+https://www.labarinformatica.com.br
+
+ - Se terminar sem erros dar o Deploy no easyPanel
+       
