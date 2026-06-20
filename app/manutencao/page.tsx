@@ -19,7 +19,7 @@ export default function Manutencao() {
           />
 
           <span className="mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-300">
-            Nova Plataforma em Desenvolvimento 
+            Nova Plataforma em Desenvolvimento. Aguarde!
           </span>
 
           <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
@@ -33,12 +33,10 @@ export default function Manutencao() {
           <p className="mt-8 max-w-3xl text-xl text-slate-300">
 
             Soluções em Inteligência Artificial,
-            automações para WhatsApp,
-           /*
-            //N8N, Evolution API,
-            //desenvolvimento de sistemas e
-            //infraestrutura cloud.
-            */
+            automações para WhatsApp,           
+            N8N, Evolution API,
+            desenvolvimento de sistemas e
+            infraestrutura cloud.            
             Estamos preparando uma experiência digital totalmente nova.
             Em breve, um site moderno e repleto de soluções para sua empresa.
           </p>
