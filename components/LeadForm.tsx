@@ -21,8 +21,6 @@ export default function LeadForm() {
       mensagem: form.get("mensagem"),
     };
 
-// Novo enviado pela IA
-
     try {
       const response = await fetch(
         "https://n8n.labarinformatica.com.br/webhook/lead-labar",
@@ -42,13 +40,29 @@ export default function LeadForm() {
   alert("Mensagem enviada com sucesso!");
   e.currentTarget.reset();
 
-} catch (error) {
+} 
+
+catch (error) {
+  console.error("ERRO COMPLETO:", error);
+
+  alert(
+    "Erro ao enviar formulário:\n" +
+    String(error)
+  );
+}
+
+
+
+/*
+catch (error) {
   console.error(error);
   alert("Erro ao enviar formulário.");
 } finally {
   setLoading(false);
 }
+*/
 }
+
 
 return (
     <section
