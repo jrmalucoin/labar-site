@@ -48,36 +48,9 @@ export default function LeadForm() {
 } finally {
   setLoading(false);
 }
+}
 
-
-
- /*  
-    try {
-      await fetch(
-        "https://n8n.labarinformatica.com.br/webhook/lead-labar",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
-
-      alert("Mensagem enviada com sucesso!");
-
-      e.currentTarget.reset();
-    } catch (error) {
-      alert("Erro ao enviar formulário.");
-    }
-
-    setLoading(false);
-  }
-    
-*/
-
-
-  return (
+return (
     <section
       id="contato"
       className="py-24 bg-slate-950"
