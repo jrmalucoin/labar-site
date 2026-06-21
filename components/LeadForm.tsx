@@ -75,7 +75,7 @@ return (
         >
           <input
             name="nome"
-            placeholder="Nome"
+            placeholder="Nome do Cliente"
             required
             className="p-4 rounded bg-slate-900 border border-slate-700"
           />
