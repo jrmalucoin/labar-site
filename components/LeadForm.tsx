@@ -17,12 +17,12 @@ async function handleSubmit(
   const form = new FormData(formElement);
 
   const data = {
-    nome: form.get("nome"),
-    empresa: form.get("empresa"),
-    whatsapp: form.get("whatsapp"),
-    email: form.get("email"),
-    servico: form.get("servico"),
-    mensagem: form.get("mensagem"),
+   name: form.get("nome"),
+   company: form.get("empresa"),
+   phone: form.get("whatsapp"),
+   email: form.get("email"),
+   service: form.get("servico"),
+   message: form.get("mensagem"),
   };
 
   try {
@@ -54,7 +54,7 @@ async function handleSubmit(
   }
 }
 
-return (
+return ( 
     <section
       id="contato"
       className="py-24 bg-slate-950"
