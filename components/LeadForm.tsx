@@ -5,64 +5,54 @@ import { useState } from "react";
 export default function LeadForm() {
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+async function handleSubmit(
+  e: React.FormEvent<HTMLFormElement>
+) {
+  e.preventDefault();
 
-    setLoading(true);
+  const formElement = e.currentTarget;
 
-    const form = new FormData(e.currentTarget);
+  setLoading(true);
 
-    const data = {
-      nome: form.get("nome"),
-      empresa: form.get("empresa"),
-      whatsapp: form.get("whatsapp"),
-      email: form.get("email"),
-      servico: form.get("servico"),
-      mensagem: form.get("mensagem"),
-    };
+  const form = new FormData(formElement);
 
-    try {
-      const response = await fetch(
-        "https://n8n.labarinformatica.com.br/webhook/lead-labar",
+  const data = {
+    nome: form.get("nome"),
+    empresa: form.get("empresa"),
+    whatsapp: form.get("whatsapp"),
+    email: form.get("email"),
+    servico: form.get("servico"),
+    mensagem: form.get("mensagem"),
+  };
+
+  try {
+    const response = await fetch(
+      "https://n8n.labarinformatica.com.br/webhook/lead-labar",
       {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Falha no envio");
     }
-  );
 
-  if (!response.ok) {
-    throw new Error("Falha no envio");
+    alert("Mensagem enviada com sucesso!");
+
+    formElement.reset();
+
+  } catch (error) {
+    console.error(error);
+
+    alert("Erro ao enviar formulário.");
+  } finally {
+    setLoading(false);
   }
-
-  alert("Mensagem enviada com sucesso!");
-  e.currentTarget.reset();
-
-} 
-
-catch (error) {
-  console.error("ERRO COMPLETO:", error);
-
-  alert(
-    "Erro ao enviar formulário:\n" +
-    String(error)
-  );
 }
-
-
-
-/*
-catch (error) {
-  console.error(error);
-  alert("Erro ao enviar formulário.");
-} finally {
-  setLoading(false);
-}
-*/
-}
-
 
 return (
     <section
